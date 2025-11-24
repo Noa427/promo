@@ -1,0 +1,19 @@
+# Fichiers temporaires
+*.tmp
+*.log
+
+# Fichiers systèmes
+.DS_Store
+Thumbs.db
+
+# Dossiers de build ou exportés (si jamais tu en crées)
+dist/
+build/
+
+# Éditeur / IDE
+.vscode/
+.idea/
+
+# Ignorer les fichiers HTML ou CSS générés automatiquement (optionnel)
+# *.html
+# *.css
