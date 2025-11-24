@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(64, 64, 197);
+    border: 500px;
+    display: flex;
+
+}
+
+h1 {
+margin-left: 3rem;
+margin-right: 3rem;
+}
+
+.text{
+    background-color: rgb(160, 142, 142);
+    margin: 5rem;
+    display: flex;
+    font-display: block;
+}
+
+.secL {
+    background-color: rgb(80, 80, 197);
+}
+.secR {
+    background-color: rgb(80, 80, 197);
+}
+
+.all {
+display: flex;
+align-items: center;
+}
