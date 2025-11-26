@@ -1,4 +1,4 @@
-/* Reset global */
+/* ----------------- Reset global ----------------- */
 * {
     margin: 0;
     padding: 0;
@@ -6,101 +6,245 @@
 }
 
 body {
-background-color: rgb(105, 105, 11);
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.6;
+    background-color: rgb(105, 105, 11);
+    color: #000;
 }
 
-/* Header */
+/* ----------------- Titres ----------------- */
+h1, h3, h6 {
+    font-family: "Geo", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-bottom: 1rem;
+}
+
+h1 { 
+    font-size: 2.5rem; color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* ----------------- Header ----------------- */
 header {
-    background-color: rgb(161, 151, 55);
-    border-bottom: 2px solid black;
-    padding: 1rem;
+    background-color: rgb(68, 86, 165);
+    border-bottom: 2px solid #000;
+    padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-header h1 {
-    margin: 0 3rem;
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
 }
 
-.fauxeni {
-    width: 5rem;
+.top h1 { 
+    margin: 0; text-align: center; 
 }
 
-/* Conteneur principal */
+.fauxeni,
+.nothing { 
+    width: 5rem; 
+}
 
+
+
+/* ----------------- Conteneur principal ----------------- */
 .all {
     display: flex;
     flex-direction: column;
-    background-color: rgb(155, 170, 19);
+    background-color: rgb(106, 126, 192);
+    padding: 1rem;
+    gap: 1rem;
 }
 
-/* Sections */
-.secL,
-.secR {
-    background-color: rgb(153, 134, 25);
-    padding: 1rem;
+/* ----------------- Sections ----------------- */
+.secL, .secR {
+    background-color: rgb(138, 163, 192);
+    padding: 1.5rem;
     display: flex;
-    align-items: center;
     flex-direction: column;
-}
-.secL {
-    border-bottom: 2px solid black;
-}
-.secR {
-    border-top: 2px solid black;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Section centrale */
+
+
+.secL:hover, .secR:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.secL { 
+    border-bottom: 2px solid #000; 
+}
+.secR { 
+    border-top: 2px solid #000; 
+}
+
+/* ----------------- Listes ----------------- */
+li {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    background-color: rgb(186, 186, 219);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+li:hover {
+    background-color: rgb(160, 160, 220);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* ----------------- Section centrale ----------------- */
 .text {
-    margin: 2rem;
-    padding: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 0.75rem;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+.fhp {
+    width: 100%;
+}
+
+/* ----------------- Page carte ----------------- */
+
+.bodyp {
+    background-image: url('/promo/image_prom/unnamed.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+body.zoo {
+    display: flex;
+    flex-direction: column; /* garde le header en haut */
+    margin: 0;
+    height: 100vh; /* hauteur totale de la fenêtre */
+    overflow: hidden; /* empêche le scroll */
+}
+
+body.zoo > header {
+    flex: 0 0 auto; /* le header garde sa taille naturelle */
+}
+
+body.zoo > div {
+    flex: 1 1 auto; /* le div contenant le GIF prend tout l'espace restant */
+    display: flex;
+}
+
+body.zoo > div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* remplit le conteneur sans déformer */
+    display: block;
 }
 
 
 
-button hover {
-    background-color: rgb(0, 65, 185);
+
+
+/* ----------------- Boutons ----------------- */
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    background-color: rgb(64, 94, 228);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-/* Span cliquable */
+button:hover {
+    background-color: rgb(56, 36, 230);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* ----------------- Span cliquable ----------------- */
 #MOT {
     cursor: pointer;
     user-select: none;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
+#MOT:hover {
+    color: rgb(56, 36, 230);
+    transform: scale(1.05);
+}
+
+/* ----------------- Footer ----------------- */
 footer {
-    background-color:  rgb(161, 151, 55);
+    background-color: rgb(64, 94, 228);
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 -3px 6px rgba(0,0,0,0.1);
 }
 
-/* pc */
+/* ----------------- Responsive ----------------- */
 @media (min-width: 600px) {
-    
-    .all{
-        display: flex;
-        flex-direction: row;
+    .all { 
+        flex-direction: row; gap: 1.5rem; 
     }
 
-    .secL,
-    .secR {
-        flex: 1;
-    }
-    .secL {
-        border-right: 2px solid black;
-        border-bottom: none;
-    }
-    .secR{
-        border-left: 2px solid black;
-        border-top: none;
+    .secL, .secR { 
+        flex: 1; 
     }
 
-    .fhp {
-        width: 20%;
+    .secL { 
+        border-right: 2px solid #000; border-bottom: none; 
     }
-    
-    footer {
-        border-top: 2px solid black ;
-        padding-bottom: 100%;
+    .secR { 
+        border-left: 2px solid #000; border-top: none; 
     }
+
+    .fhp { 
+        width: 50%; 
+    }
+
+    li { 
+        border-radius: 0.5rem; background-color: rgba(255,255,255,0.1); box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+    }
+
+    li:hover { 
+        background-color: rgba(255,255,255,0.2); transform: translateY(-2px); 
+    }
+
+    h1 { 
+        font-size: 3rem; 
+    }
+
+    .secHeader { 
+        display: flex; flex-direction: column; align-items: center; 
+        }
+    .secHeader ul { 
+        display: flex; flex-direction: row; gap: 1rem; 
+    }
+
 
 }
+
