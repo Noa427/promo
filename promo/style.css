@@ -14,8 +14,16 @@ body {
     color: #000;
 }
 
+p {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.6;
+    color: #000;
+}
+
 /* ----------------- Titres ----------------- */
-h1, h3, h6 {
+h1, h2, h3, h6 {
     font-family: "Geo", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -54,6 +62,95 @@ header {
     width: 5rem; 
 }
 
+/* ----------------- Lien en construction ----------------- */
+.linktwo {
+    list-style: none;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 1rem;
+    color: rgba(0, 0, 0, 0.753);
+    border: 1px solid rgb(180, 94, 94);
+    border-radius: 1rem;
+    background-color: rgb(180, 94, 94);
+    text-decoration: none;
+}
+
+.linktwo:hover {
+    background-color: rgb(160, 160, 220);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border: 1px solid black;
+}
+
+.zoo .secR {
+    border: 3px solid black;
+}
+
+.info header{
+    height: 100%;
+}
+
+.info h2 {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+.fratte {
+    width: 50%;
+    margin-top: 10rem;
+}
+
+.thirdlink {
+    list-style: none;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 1rem;
+    color: rgba(0, 0, 0, 0.753);
+    font-style: italic;
+    font-size: 1.5em;
+    border: 3px solid rgb(192, 164, 8);
+    border-radius: 1rem;
+    background-color: rgb(151, 34, 34);
+    text-decoration: none;
+}
+
+.thirdlink:hover {
+    background-color: rgb(252, 197, 19);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.397);
+    border: 5px solid rgb(126, 6, 6);
+}
+
+#lock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(90, 29, 29, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+
+#popup {
+  background: white;
+  padding: 20px;
+  border: 10px solid rgba(223, 196, 43, 0.8);
+  border-radius: 2rem;
+  text-align: center;
+}
+
+#magic {
+  display: none;
+  border-radius: 2rem;
+  margin-left: 2rem;
+}
 
 
 /* ----------------- Conteneur principal ----------------- */
@@ -76,8 +173,6 @@ header {
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-
 
 .secL:hover, .secR:hover {
     transform: translateY(-3px);
@@ -140,25 +235,25 @@ li:hover {
 
 body.zoo {
     display: flex;
-    flex-direction: column; /* garde le header en haut */
+    flex-direction: column;
     margin: 0;
-    height: 100vh; /* hauteur totale de la fenêtre */
-    overflow: hidden; /* empêche le scroll */
+    height: 100vh;
+    overflow: hidden;
 }
 
 body.zoo > header {
-    flex: 0 0 auto; /* le header garde sa taille naturelle */
+    flex: 0 0 auto;
 }
 
 body.zoo > div {
-    flex: 1 1 auto; /* le div contenant le GIF prend tout l'espace restant */
+    flex: 1 1 auto;
     display: flex;
 }
 
 body.zoo > div img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* remplit le conteneur sans déformer */
+    object-fit: cover;
     display: block;
 }
 
@@ -248,3 +343,24 @@ footer {
 
 }
 
+.apprenants-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.apprenant {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    width: 200px;
+    text-align: center;
+}
+
+.apprenant img.avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
